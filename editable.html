@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://editor.silex.me/static/2.12/normalize.css" data-silex-static="">
     <link rel="stylesheet" href="https://editor.silex.me/static/2.12/front-end.css" data-silex-static="">
 
-    <style class="silex-style">html {font-family: 'Mukta', sans-serif;}nav ul li {position: relative; display: inline-block; margin-right: 20px; color: white;}nav ul li::after {content: ""; position: absolute; width: 100%; height: 2px; background-color: #F6B620; bottom: 0; left: 0; transform: scaleX(0); transition: transform 0.3s ease-in-out;}nav ul li:hover::after {transform: scaleX(1);}nav {font-size: 20px;}nav a {color: white; text-decoration: none; font-weight: 400; font-size: 20px;}.rise-text {display: inline-block; animation: rise 2s ease-out forwards; transform: translateY(50px); opacity: 0;}@keyframes rise { 
+    <style class="silex-style">html {font-family: 'Mukta', sans-serif;}nav ul li {position: relative; display: inline-block; margin-right: 20px; color: white;}nav ul li::after {content: ""; position: absolute; width: 100%; height: 2px; background-color: #F6B620; bottom: 0; left: 0; transform: scaleX(0); transition: transform 0.3s ease-in-out;}nav ul li:hover::after {transform: scaleX(1);}nav {font-size: 20px;}nav a {color: white; text-decoration: none; font-weight: 400; font-size: 20px;}.rise-text {display: inline-block; transform: translateY(50px); opacity: 0;}.rise-animate {animation: rise 2s ease-out forwards;}@keyframes rise { 
   to {transform: translateY(0); opacity: 1;} 
 }.img-notes {rotate: 30deg; opacity: 50%;}</style>
     <script type="text/javascript" class="silex-script"></script>
@@ -85,18 +85,19 @@
     </section><section data-silex-type="container-element" class="container-element editable-style silex-id-1474394621033-3 section-element prevent-resizable page-page-1 paged-element" data-silex-id="silex-id-1474394621033-3">
         <div data-silex-type="container-element" class="editable-style silex-element-content silex-id-1474394621032-2 container-element website-width selected" data-silex-id="silex-id-1474394621032-2" style=""><div data-silex-type="html-element" class="editable-style html-element silex-id-1692626188320-5 rise-text" data-silex-id="silex-id-1692626188320-5" style=""><div class="silex-element-content"><h1>Fostering <span style="color: #F6B620;">Excellence</span> and <span style="color: #F6B620;">Character</span> Through Music</h1>
 <script>
-    var observer = new IntersectionObserver(
+var observer = new IntersectionObserver(
   function (entries, observer) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        entry.target.classList.add("rise-text");
+        entry.target.classList.add("rise-animate");
+        observer.unobserve(entry.target); // Stop observing once animation is triggered
       }
     });
   },
   { threshold: 0.5 }
-); // Set the threshold to 0.5 to trigger when the element is at least 50% in view
+);
 
-var scrollTriggers = document.querySelectorAll(".rise-text");
+var scrollTriggers = document.querySelectorAll(".fade-in");
 
 scrollTriggers.forEach(function (trigger) {
   observer.observe(trigger);
