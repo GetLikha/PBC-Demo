@@ -77,39 +77,43 @@ scrollTriggers.forEach(function (trigger) {
   observer.observe(trigger);
 });
 </script></div></div><nav data-silex-type="html-element" class="editable-style html-element silex-id-1692624303471-1 hide-on-mobile" data-silex-id="silex-id-1692624303471-1" style=""><div class="silex-element-content"><ul>
-    <div class="dropdown">
+  <div class="dropdown">
     <li id="home"><a href="index.html">Home</a></li>
     <div class="dropdown-content">
-    <a href="#">MyMusicStaff</a>
-    <a href="#">Online Student Tools</a>
-    <a href="#">Online Lesson Library</a>
+      <a href="#">MyMusicStaff</a>
+      <a href="#">Online Student Tools</a>
+      <a href="#">Online Lesson Library</a>
+    </div>
   </div>
-  </div>
-    <li>Events</li>
-    <li>About Us</li>
-    <li>Support Us</li>
-    <li>Contact Us</li>
+  <li>Events</li>
+  <li>About Us</li>
+  <li>Support Us</li>
+  <li>Contact Us</li>
+  <div class="dropdown">
     <li><span style="color: #F6B620"><b>Join Us</b></span></li>
+    <div class="dropdown-content">
+      <a href="#">MyMusicStaff</a>
+      <a href="#">Online Student Tools</a>
+      <a href="#">Online Lesson Library</a>
+    </div>
+  </div>
 </ul>
 
 <script>
-    // Get the current page's filename
-    var currentPage = window.location.pathname.split('/').pop();
-
-    // Remove ".html" extension to compare with menu items
-    currentPage = currentPage.replace('.html', '');
-
-    // Identify the menu item and set it as active
-    if (currentPage === 'index') {
-      document.getElementById('home').classList.add('active');
-    } else if (currentPage === 'about') {
-      document.getElementById('about').classList.add('active');
-    } else if (currentPage === 'services') {
-      document.getElementById('services').classList.add('active');
-    }
-    // Add more conditions for other pages
-
-  </script></div></nav></div>
+  // Get the current page's filename
+  var currentPage = window.location.pathname.split('/').pop();
+  // Remove ".html" extension to compare with menu items
+  currentPage = currentPage.replace('.html', '');
+  // Identify the menu item and set it as active
+  if (currentPage === 'index') {
+    document.getElementById('home').classList.add('active');
+  } else if (currentPage === 'about') {
+    document.getElementById('about').classList.add('active');
+  } else if (currentPage === 'services') {
+    document.getElementById('services').classList.add('active');
+  }
+  // Add more conditions for other pages
+</script></div></nav></div>
     </section><section data-silex-type="container-element" class="container-element editable-style silex-id-1478366450713-3 section-element prevent-resizable page-page-1 page-home-phoenix-boys-club paged-element hide-on-mobile" data-silex-id="silex-id-1478366450713-3">
         <div data-silex-type="container-element" class="editable-style silex-element-content silex-id-1478366450713-2 container-element website-width" data-silex-id="silex-id-1478366450713-2" style="">
 
